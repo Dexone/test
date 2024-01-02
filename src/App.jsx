@@ -2,19 +2,23 @@ import { useState, useRef } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-function test(){
-  console.log(count)
-}
+  const student = "Привет"
+
+  function a(student){
+    console.log(student)
+  }
+
+
+
+
+  const [text, setText] = useState(" ");
+  function test(){
+    console.log(text)
+  }
   return (
     <>
-
-      <input
-        value={count}
-        onChange={e => setCount(e.target.value)}
-      />
-
-      <button onClick={test}>test</button>
+      <input onChange={e => setText(e.target.value)}/>
+      <button onClick={a}>test</button>
     </>
   )
 }
